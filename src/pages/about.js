@@ -52,7 +52,7 @@ const About = () => {
                     <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
                         <div
                             className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 xmd:order-2 xmd:col-span-8">
-                            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Biography</h2>
+                            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Biografia</h2>
                             <p className="font-medium">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -76,7 +76,7 @@ const About = () => {
                                 className="absolute top-0 -right-2 -z-10 w-[102%] h-[102%] rounded-3xl bg-dark dark:bg-light "/>
                             <FramerImage
                                 src={placeholder}
-                                alt="Your Name"
+                                alt="Gustavo Ariel Gamarra Rojas"
                                 className="w-full h-[500px] lg:h-[450px] sm:h-[400px] xs:h-[350px] object-cover rounded-2xl"
                                 whileHover={{scale: 1.02}}
                                 transition={{duration: 0.2}}
