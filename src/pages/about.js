@@ -3,6 +3,7 @@ import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Image from "next/image";
+import foto from "../../public/foto.webp"
 import placeholder from "../../public/images/svgs/placeholder.svg"
 
 const FramerImage = motion(Image);
@@ -75,7 +76,7 @@ const About = () => {
                             <div
                                 className="absolute top-0 -right-2 -z-10 w-[102%] h-[102%] rounded-3xl bg-dark dark:bg-light "/>
                             <FramerImage
-                                src={placeholder}
+                                src={foto}
                                 alt="Gustavo Ariel Gamarra Rojas"
                                 className="w-full h-[500px] lg:h-[450px] sm:h-[400px] xs:h-[350px] object-cover rounded-2xl"
                                 whileHover={{scale: 1.02}}
