@@ -1,113 +1,103 @@
 import React from 'react';
-import gridImage from "@/assets/images/grid-image1.png";
-import gridImage2 from "@/assets/images/grid-image2.png";
-import clsx from 'clsx';
+import {
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPhp, FaPython, FaDatabase,
+  FaFigma, FaSketch, FaJava, FaGitAlt
+} from 'react-icons/fa';
+import {
+  SiNextdotjs, SiAdobephotoshop, SiAdobeillustrator,
+  SiAdobepremierepro, SiAdobeaftereffects, SiC, SiSpringboot, SiGo
+} from 'react-icons/si';
 
 const Skills = () => {
-    return (
+  const skills = [
+    {
+      title: 'Frontend',
+      items: [
+        { name: 'HTML5', icon: <FaHtml5 className="text-orange-500" /> },
+        { name: 'CSS3', icon: <FaCss3Alt className="text-blue-500" /> },
+        { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+        { name: 'React', icon: <FaReact className="text-sky-400" /> },
+        { name: 'Next.js', icon: <SiNextdotjs className="text-black dark:text-white" /> },
+      ]
+    },
+    {
+      title: 'Backend',
+      items: [
+        { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+        { name: 'PHP', icon: <FaPhp className="text-indigo-700" /> },
+        { name: 'Python', icon: <FaPython className="text-blue-400" /> },
+        { name: 'Java', icon: <FaJava className="text-red-600" /> },
+        { name: 'Spring Boot', icon: <SiSpringboot className="text-green-700" /> },
+        { name: 'Go', icon: <SiGo className="text-cyan-600" /> },
+        { name: 'C', icon: <SiC className="text-gray-600" /> },
+        { name: 'SQL / PL-SQL', icon: <FaDatabase className="text-purple-600" /> },
+      ]
+    },
+    {
+      title: 'Design',
+      items: [
+        { name: 'Figma', icon: <FaFigma className="text-pink-500" /> },
+        { name: 'Sketch', icon: <FaSketch className="text-yellow-500" /> },
+        { name: 'Photoshop', icon: <SiAdobephotoshop className="text-blue-800" /> },
+        { name: 'Illustrator', icon: <SiAdobeillustrator className="text-orange-600" /> },
+        { name: 'Premiere Pro', icon: <SiAdobepremierepro className="text-indigo-600" /> },
+        { name: 'After Effects', icon: <SiAdobeaftereffects className="text-purple-700" /> },
+      ]
+    },
+    {
+      title: 'Otros',
+      items: [
+        { name: 'Git', icon: <FaGitAlt className="text-orange-600" /> },
+        {name: 'GitHub', icon: <FaGitAlt className="text-gray-600" /> },
+        { name: 'Bash', icon: <SiC className="text-gray-400" /> },
+      ]
+    }
+  ];
 
-        <section className="c-space w-full pt-36 mt-32 sm:px-2">
-            <div className="flex items-center space-x-4 sm:justify-center sm:pb-12">
-                <h2 className="font-bold text-7xl text-start md:text-6xl xs:text-5xl sm:!text-4xl">Skills</h2>
-                <span
-                    className={`xs:hidden h-[3px] w-40 bg-primary dark:bg-primaryDark transition-all duration-300 group-hover:w-52 md:w-32 sm:w-24`}
-                ></span>
-            </div>
+  const chunkArray = (arr, size) => {
+    const result = [];
+    for (let i = 0; i < arr.length; i += size) {
+      result.push(arr.slice(i, i + size));
+    }
+    return result;
+  };
 
+  return (
+    <section className="w-full pt-36 mt-32 px-4 sm:px-2">
+      <div className="flex items-center space-x-4 sm:justify-center sm:pb-12">
+        <h2 className="font-bold text-7xl text-start md:text-6xl xs:text-5xl sm:!text-4xl">Habilidaes</h2>
+        <span className="xs:hidden h-[3px] w-40 bg-primary dark:bg-primaryDark transition-all duration-300 group-hover:w-52 md:w-32 sm:w-24" />
+      </div>
 
-            <div
-                className="grid grid-cols-3 sm:grid-cols-2 xl:grid-cols-4 relative rounded-2xl py-16 md:py-8 skills-container">
-
-
-                <div className="absolute inset-0 z-1 sm:hidden bg-bgLightXl dark:bg-bgDarkXl" style={{
-                    zIndex: 1
-                }}/>
-                <div className="absolute inset-0 z-1 hidden bg-bgLight sm:block dark:bg-bgDark" style={{
-                    zIndex: 1
-                }}/>
-
-
-                {/* Skill Section 1 */}
-                <div className="col-span-2 xl:col-span-2 relative">
-                    <div
-                        className="relative flex flex-col items-center justify-start
-        p-4 border-b-5xl border-mid-5xl  border-light dark:border-dark h-[276px] w-full sm:border-b-5xl sm:border-r-0
-         xl:items-center xl:justify-center"
-                    >
-                        <div
-                            className="absolute inset-0 z-10 border-2 border-black dark:border-light bg-light/40 dark:bg-black/40 dark:md:bg-black/20 "></div>
-
-                        <div
-                            className="relative self-end  z-10 w-2/4 text-end lg:w-full  xl:w-full xl:text-center lg:self-end px-4 pb-4">
-                            <p className="dark:text-white text-2xl font-bold md:text-xl">
-                                <span className="  md:text-primary dark:text-primaryDark">Frontend&nbsp;</span>
-                                Skills</p>
-                            <p className="dark:text-white text-lg font-medium md:text-sm sm:text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
+      <div className="mt-12 overflow-x-auto">
+        <div className="flex space-x-6 min-w-full">
+          {skills.map((category) => {
+            const chunks = chunkArray(category.items, 5); 
+            return (
+              <div
+                key={category.title}
+                className="flex flex-col min-w-[280px] bg-light dark:bg-dark p-6 rounded-2xl shadow-md"
+              >
+                <h3 className="text-xl font-bold mb-4 dark:text-white">{category.title}</h3>
+                <div className="flex space-x-4">
+                  {chunks.map((chunk, i) => (
+                    <ul key={i} className="space-y-3">
+                      {chunk.map((skill) => (
+                        <li key={skill.name} className="flex items-center space-x-3 text-lg dark:text-white">
+                          <span className="text-2xl">{skill.icon}</span>
+                          <span>{skill.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ))}
                 </div>
-
-
-                {/* Skill Section 2 */}
-                <div
-                    className="col-span-1 row-span-2 xl:col-span-2 xl:row-span-1 relative sm:h-64 xl:border-b-5xl dark:border-dark ">
-                    <div
-                        className="relative flex items-start text-start p-4
-                        h-full w-full xl:items-center xl:text-center "
-                    >
-                        <div
-                            className="absolute inset-0 z-10 border-2 border-black dark:border-light  bg-light/40 dark:bg-black/40 dark:md:bg-black/20 "></div>
-                        <div className="relative z-10 w-full px-4 pb-4">
-                            <p className="dark:text-white text-2xl font-bold md:text-xl sm:text-xl">
-                                <span className="  md:text-primary dark:text-primaryDark">Backend&nbsp;</span>Skills</p>
-                            <p className="dark:text-white text-lg font-medium md:text-sm sm:text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Skill Section 3 */}
-                <div className="col-span-1 xl:col-span-2 relative ">
-                    <div
-                        className="relative flex items-end text-start p-4 border-mid-5xl
-                        sm:border-r-0 sm:border-b-5xl dark:border-dark h-[276px] w-full xl:items-center xl:text-center"
-                    >
-                        <div
-                            className="absolute inset-0 z-10 border-2 border-black dark:border-light bg-light/40 dark:bg-black/40 dark:md:bg-black/20 "></div>
-
-                        <div className="relative z-10 w-full px-4 pb-4">
-                            <p className="dark:text-white text-2xl font-bold md:text-xl">
-                                <span className="  md:text-primary dark:text-primaryDark">Design&nbsp;</span>Skills</p>
-                            <p className="dark:text-white text-lg font-medium md:text-sm w-full xl:w-full sm:text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Contact Section */}
-                <div className="col-span-1 xl:col-span-2 relative">
-                    <div
-                        className="relative flex items-end text-end p-4 border-mid-5xl
-                         dark:border-dark xl:border-none  h-[276px] w-full xl:items-center xl:text-center"
-                    >
-                        <div
-                            className="absolute inset-0 z-10 border-2   border-black dark:border-light bg-light/40 dark:bg-black/40 dark:md:bg-black/20 "></div>
-
-                        <div className="relative z-10 w-full px-4 pb-4">
-                            <p className="dark:text-white text-2xl font-bold md:text-xl">Contact</p>
-                            <p className="dark:text-white text-lg font-medium md:text-sm w-full  xl:w-full sm:text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Skills;

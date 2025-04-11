@@ -3,7 +3,7 @@ import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import placeholder from "../../public/images/svgs/placeholder.svg"
+import foto from "/home/isseyou/Documents/portfolio/public/foto.webp";
 
 const FramerImage = motion(Image);
 
@@ -41,8 +41,8 @@ const About = () => {
     return (
         <>
             <Head>
-                <title>Your Name | About</title>
-                <meta name="description" content="About Page"/>
+                <title>Gustavo Gamarra | Sobre mi</title>
+                <meta name="description" content="Sobre Mi"/>
             </Head>
             <TransitionEffect/>
             <main className="flex w-full flex-col items-center justify-center dark:text-light ">
@@ -53,19 +53,16 @@ const About = () => {
                         <div
                             className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 xmd:order-2 xmd:col-span-8">
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">Biografia</h2>
-                            <p className="font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <p className="pt-12">
+                            Hola! Soy Gustavo Ariel Gamarra Rojas, especialista en UX/UI con enfoque en análisis de datos y comportamiento de usuarios. 
+                            A mis 29 años, he desarrollado una sólida experiencia optimizando interfaces digitales mediante metodologías basadas en evidencia.
+                            
                             </p>
                             <p className="my-4 font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua.
+                            Mi trayectoria profesional se distingue por implementar ecosistemas completos de seguimiento analítico (Google Analytics 4, Tag Manager, Microsoft Clarity) que me permiten transformar datos en insights accionables, logrando incrementos significativos en tasas de conversión y reducción de abandonos.
                             </p>
                             <p className="font-medium">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Actualmente estoy ampliando mis competencias técnicas como estudiante de Análisis y Desarrollo de Software en Uniamérica, donde aplico la metodología Problem Learning para resolver desafíos tecnológicos reales.
                             </p>
                         </div>
                         <div
@@ -75,7 +72,7 @@ const About = () => {
                             <div
                                 className="absolute top-0 -right-2 -z-10 w-[102%] h-[102%] rounded-3xl bg-dark dark:bg-light "/>
                             <FramerImage
-                                src={placeholder}
+                                src={foto}
                                 alt="Gustavo Ariel Gamarra Rojas"
                                 className="w-full h-[500px] lg:h-[450px] sm:h-[400px] xs:h-[350px] object-cover rounded-2xl"
                                 whileHover={{scale: 1.02}}
@@ -88,24 +85,24 @@ const About = () => {
                         xl:col-span-8 xl:flex-row xl:items-center xmd:order-3 gap-3">
                             <div className="flex flex-col items-end justify-center xl:items-center">
                                 <span className="inline-block text-7xl font-bold xmd:text-6xl sm:text-5xl xs:text-4xl">
-                                    <AnimatedNumbers value={50}/>+
+                                    <AnimatedNumbers value={2000}/>+
                                 </span>
                                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
-                                 xl:text-center xmd:text-lg sm:text-base xs:text-sm">satisfied clients</h2>
+                                 xl:text-center xmd:text-lg sm:text-base xs:text-sm">CLientes Satisfechos</h2>
                             </div>
                             <div className="flex flex-col items-end justify-center xl:items-center">
                                 <span className="inline-block text-7xl font-bold xmd:text-6xl sm:text-5xl xs:text-4xl">
                                     <AnimatedNumbers value={50}/>+
                                 </span>
                                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
-                                xl:text-center xmd:text-lg sm:text-base xs:text-sm">projects completed</h2>
+                                xl:text-center xmd:text-lg sm:text-base xs:text-sm">Proyectos Completados</h2>
                             </div>
                             <div className="flex flex-col items-end justify-center xl:items-center ">
                                 <span className="inline-block text-7xl font-bold xmd:text-6xl sm:text-5xl xs:text-4xl">
-                                    <AnimatedNumbers value={4}/>+
+                                    <AnimatedNumbers value={3}/>+ 
                                 </span>
                                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
-                                xl:text-center xmd:text-lg sm:text-sm  xs:text-sm">years of experience</h2>
+                                xl:text-center xmd:text-lg sm:text-sm  xs:text-sm">Años de Experiencia</h2>
                             </div>
 
                         </div>

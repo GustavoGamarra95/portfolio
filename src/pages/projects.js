@@ -89,8 +89,8 @@ const Projects = () => {
     return (
         <>
             <Head>
-                <title>Your Name | Projects</title>
-                <meta name="description" content="Projects Page"/>
+                <title>Gustavo Gamarra | Proyectos</title>
+                <meta name="description" content="Proyectos Page"/>
             </Head>
             <TransitionEffect/>
             <main className="w-full mb-16 flex flex-col items-center justify-center">

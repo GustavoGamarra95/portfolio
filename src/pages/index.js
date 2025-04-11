@@ -46,7 +46,7 @@ export default function Home() {
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
-                                    href="/dummy.pdf"
+                                    href="/Analista-UX_UI-GUSTAVO-ARIEL-GAMARRA-ROJAS.pdf"
                                     target="_blank"
                                     className="flex items-center bg-dark text-light
                                        py-2.5 px-6 mr-4 rounded-lg text-lg font-semibold
