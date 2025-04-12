@@ -127,10 +127,9 @@ const NavBar = () => {
                     transition={{duration: 0.3, ease: "easeInOut"}}
                 >
                     <nav className="flex items-center flex-col justify-center xs:gap-2">
-                        <CustomMobileLink href="/" title="Home" className="" toggle={handleClick}/>
-                        <CustomMobileLink href="/about" title="About" className="" toggle={handleClick}/>
-                        <CustomMobileLink href="/projects" title="Projects" className="" toggle={handleClick}/>
-                        <CustomMobileLink href="/articles" title="Articles" className="" toggle={handleClick}/>
+                        <CustomMobileLink href="/" title="Inicio" className="" toggle={handleClick}/>
+                        <CustomMobileLink href="/about" title="Sobre Mi" className="" toggle={handleClick}/>
+                        <CustomMobileLink href="/projects" title="Proyectos" className="" toggle={handleClick}/>
                     </nav>
                     <nav className="flex items-center justify-center flex-wrap mt-10">
                         
