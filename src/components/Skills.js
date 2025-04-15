@@ -54,47 +54,33 @@ const Skills = () => {
     }
   ];
 
-  const chunkArray = (arr, size) => {
-    const result = [];
-    for (let i = 0; i < arr.length; i += size) {
-      result.push(arr.slice(i, i + size));
-    }
-    return result;
-  };
-
   return (
     <section className="w-full pt-36 mt-32 px-4 sm:px-2">
       <div className="flex items-center space-x-4 sm:justify-center sm:pb-12">
-        <h2 className="font-bold text-7xl text-start md:text-6xl xs:text-5xl sm:!text-4xl">Habilidaes</h2>
+        <h2 className="font-bold text-7xl text-start md:text-6xl xs:text-5xl sm:!text-4xl">Habilidades</h2>
         <span className="xs:hidden h-[3px] w-40 bg-primary dark:bg-primaryDark transition-all duration-300 group-hover:w-52 md:w-32 sm:w-24" />
       </div>
 
-      <div className="mt-12 overflow-x-auto">
-        <div className="flex space-x-6 min-w-full">
-          {skills.map((category) => {
-            const chunks = chunkArray(category.items, 5); 
-            return (
-              <div
-                key={category.title}
-                className="flex flex-col min-w-[280px] bg-light dark:bg-dark p-6 rounded-2xl shadow-md"
-              >
-                <h3 className="text-xl font-bold mb-4 dark:text-white">{category.title}</h3>
-                <div className="flex space-x-4">
-                  {chunks.map((chunk, i) => (
-                    <ul key={i} className="space-y-3">
-                      {chunk.map((skill) => (
-                        <li key={skill.name} className="flex items-center space-x-3 text-lg dark:text-white">
-                          <span className="text-2xl">{skill.icon}</span>
-                          <span>{skill.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ))}
+      {/* Layout completamente vertical para todas las resoluciones */}
+      <div className="mt-12 space-y-6">
+        {skills.map((category) => (
+          <div
+            key={category.title}
+            className="w-full bg-light dark:bg-dark p-6 rounded-2xl shadow-md"
+          >
+            <h3 className="text-xl font-bold mb-4 dark:text-white">{category.title}</h3>
+            
+            {/* Grid adaptable para las habilidades */}
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {category.items.map((skill) => (
+                <div key={skill.name} className="flex items-center space-x-2">
+                  <span className="text-xl">{skill.icon}</span>
+                  <span className="text-sm sm:text-base dark:text-white">{skill.name}</span>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

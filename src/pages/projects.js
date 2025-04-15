@@ -95,7 +95,8 @@ const Projects = () => {
             <TransitionEffect/>
             <main className="w-full mb-16 flex flex-col items-center justify-center">
                 <Layout className="py-16">
-                    <AnimatedText text="Imagination Trumps Knowledge!"
+                    <AnimatedText text="Si lo puedes imaginar, lo puedes crear."
+            
                                   className="mb-16 !text-8xl lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-6"/>
                     <div className="mt-10 grid grid-cols-12 gap-24 gap-y-32
                      xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
