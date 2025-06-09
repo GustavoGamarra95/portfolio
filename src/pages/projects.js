@@ -8,7 +8,6 @@ import Quati from "/home/isseyou/Documents/portfolio/public/Quati.png";
 import Salesboard from "/home/isseyou/Documents/portfolio/public/Salesboard.png";
 import inorbit from "../../public/inorbit.png";
 import BIGCART from "../../public/BIGCART.png";
-
 import { GithubIcon } from "@/components/Icons";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
