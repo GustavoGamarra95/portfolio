@@ -3,7 +3,7 @@ import Head from "next/head";
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Image from "next/image";
-import foto from "/home/isseyou/Documents/portfolio/public/foto.webp";
+import foto from "../../public/foto.webp";
 
 const FramerImage = motion(Image);
 
